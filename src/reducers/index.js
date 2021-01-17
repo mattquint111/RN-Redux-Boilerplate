@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux'
 
-export default combineReducers({
-    libraries: () => []
+import { counterReducer } from './counterReducer'
+
+export const rootReducer = combineReducers({
+    counterReducer
 })

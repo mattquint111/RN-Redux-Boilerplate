@@ -1,16 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import reducers from './src/reducers'
+import { rootReducer } from './src/reducers/index'
+import TestCounter from './src/components/TestCounter'
 
-const store = createStore(reducers)
+const store = createStore(rootReducer)
 
 const App = () => {
     return (
         <Provider store={store}>
             <View style={styles.container}>
-                <Text>APP</Text>
+                <TestCounter />
             </View>
         </Provider>
     );
